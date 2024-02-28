@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How's Your Day, Yanyan?</title>
+</head>
+<body>
+
+<h1>How's Your day, Yanyan?</h1>
+
+<p>Choose an option:</p>
+
+<button onclick="giveReward()">Get Reward</button>
+<button onclick="giveAdvice()">Get Advice</button>
+
+<p id="result"></p>
+
+<script>
+function giveReward() {
+    var rewards = ["You're doing great!", "Treat yourself to something nice!", "Keep up the good work!"];
+    var randomReward = rewards[Math.floor(Math.random() * rewards.length)];
+    document.getElementById("result").innerHTML = randomReward;
+}
+
+function giveAdvice() {
+    var advice = ["Take a deep breath and relax.", "Focus on one task at a time.", "Don't forget to take breaks."];
+    var randomAdvice = advice[Math.floor(Math.random() * advice.length)];
+    document.getElementById("result").innerHTML = randomAdvice;
+}
+</script>
+
+</body>
+</html>
